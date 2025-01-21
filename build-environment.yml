@@ -1,9 +1,9 @@
 name: build-env
 channels:
+  - https://prefix.dev/emscripten-forge-dev
   - conda-forge
 dependencies:
   - python
-  - pip
   - jupyter_server
-  - jupyterlite-core >=0.5.0,<0.6
-  - jupyterlite-xeus>=3.0.0,<4
+  - jupyterlite-core
+  - jupyterlite-xeus =3.1.0
