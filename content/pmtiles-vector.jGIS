@@ -1,0 +1,65 @@
+{
+  "layerTree": [
+    "93077483-0e49-4135-aa1d-244e29e5cf97",
+    "95523f4c-27ef-42db-b755-a226ca017a94"
+  ],
+  "layers": {
+    "93077483-0e49-4135-aa1d-244e29e5cf97": {
+      "name": "OpenStreetMap.Mapnik Layer",
+      "parameters": {
+        "source": "c42d25fc-ca10-4447-ba00-ba22b0367739"
+      },
+      "type": "RasterLayer",
+      "visible": true
+    },
+    "95523f4c-27ef-42db-b755-a226ca017a94": {
+      "name": "Custom Vector Tile Layer",
+      "parameters": {
+        "color": "#FF0000",
+        "opacity": 1.0,
+        "source": "e52daf20-9b57-4a14-9521-70eabbe4cda2",
+        "type": "line"
+      },
+      "type": "VectorTileLayer",
+      "visible": true
+    }
+  },
+  "metadata": {},
+  "options": {
+    "bearing": 0.0,
+    "extent": [
+      18050132.8197512,
+      -5872240.531289864,
+      20577212.404809494,
+      -3917230.883451412
+    ],
+    "latitude": -40.197854210907515,
+    "longitude": 173.4976730009204,
+    "pitch": 0.0,
+    "projection": "EPSG:3857",
+    "zoom": 5.898552104144127
+  },
+  "sources": {
+    "c42d25fc-ca10-4447-ba00-ba22b0367739": {
+      "name": "OpenStreetMap.Mapnik",
+      "parameters": {
+        "attribution": "(C) OpenStreetMap contributors",
+        "maxZoom": 19.0,
+        "minZoom": 0.0,
+        "provider": "OpenStreetMap",
+        "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "urlParameters": {}
+      },
+      "type": "RasterSource"
+    },
+    "e52daf20-9b57-4a14-9521-70eabbe4cda2": {
+      "name": "Custom Vector Tile Layer Source",
+      "parameters": {
+        "maxZoom": 24.0,
+        "minZoom": 0.0,
+        "url": "https://r2-public.protomaps.com/protomaps-sample-datasets/nz-buildings-v3.pmtiles"
+      },
+      "type": "VectorTileSource"
+    }
+  }
+}

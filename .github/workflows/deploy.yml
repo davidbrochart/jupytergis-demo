@@ -30,7 +30,6 @@ jobs:
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
-          cp README.md content
           wget https://github.com/geojupyter/jupytergis/archive/refs/heads/main.zip
           unzip main.zip
           cd jupytergis-main
