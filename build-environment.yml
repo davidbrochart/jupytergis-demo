@@ -3,7 +3,7 @@ channels:
   - https://prefix.dev/emscripten-forge-dev
   - conda-forge
 dependencies:
-  - python
+  - python =3.13
   - jupyter_server
   - jupyterlite-core
   - jupyterlite-xeus =3.1.0

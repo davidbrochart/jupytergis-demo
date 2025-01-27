@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+      #- name: Setup Python
+      #  uses: actions/setup-python@v5
+      #  with:
+      #    python-version: '3.13'
 
       - name: Install mamba
         uses: mamba-org/setup-micromamba@v1
@@ -30,15 +30,22 @@ jobs:
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
+          which python
           wget https://github.com/geojupyter/jupytergis/archive/refs/heads/main.zip
           unzip main.zip
+          rm -rf jupytergis-main/docs
           cd jupytergis-main
-          pip install "jupyterlab>=4.3,<5" "datamodel-code-generator>=0.23.0"
+          python -m pip install "jupyterlab==4.3" "datamodel-code-generator>=0.23.0"
           jlpm install
           jlpm build
-          pip install python/jupytergis_lab
+          #cd packages/schema
+          #jlpm build
+          #cd ../..
+          #cd packages/base
+          #jlpm build
+          #cd ../..
+          mv node_modules ..
           cd ..
-          rm -rf jupytergis-main
           jupyter lite build --contents content --output-dir dist
 
       - name: Upload artifact
