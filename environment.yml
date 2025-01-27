@@ -6,7 +6,6 @@ dependencies:
   - python
   - pip
   - xeus-python
-  - jupytergis_lab =0.3.0
   - emscripten-abi =3.1.73
   - pip:
     - my-jupyter-shared-drive ==0.1.5

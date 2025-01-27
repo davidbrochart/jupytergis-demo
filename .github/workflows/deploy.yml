@@ -31,6 +31,15 @@ jobs:
         shell: bash -l {0}
         run: |
           cp README.md content
+          wget https://github.com/geojupyter/jupytergis/archive/refs/heads/main.zip
+          unzip main.zip
+          cd jupytergis-main
+          pip install "jupyterlab>=4.3,<5" "datamodel-code-generator>=0.23.0"
+          jlpm install
+          jlpm build
+          pip install python/jupytergis_lab
+          cd ..
+          rm -rf jupytergis-main
           jupyter lite build --contents content --output-dir dist
 
       - name: Upload artifact
