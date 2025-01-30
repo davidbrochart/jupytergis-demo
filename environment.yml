@@ -13,9 +13,10 @@ dependencies:
   - yjs-widgets>=0.3.5,<0.4
   - comm>=0.1.2,<0.2.0
   - pydantic>=2,<3
+  - mapbox-vector-tile
   - pip:
     - my-jupyter-shared-drive ==0.1.5
     - jupyterlab ==4.3
-    - jupytergis-main/python/jupytergis_lab
-    - jupytergis-main/python/jupytergis_core
+    - jupytergis-emscripten/python/jupytergis_lab
+    - jupytergis-emscripten/python/jupytergis_core
     #- my-jupyter-shared-drive-main

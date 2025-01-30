@@ -31,14 +31,14 @@ jobs:
         shell: bash -l {0}
         run: |
           which python
-          wget https://github.com/geojupyter/jupytergis/archive/refs/heads/main.zip
-          unzip main.zip
+          wget https://github.com/davidbrochart/jupytergis/archive/refs/heads/emscripten.zip
+          unzip emscripten.zip
           #rm main.zip
           #wget https://github.com/davidbrochart/my-jupyter-shared-drive/archive/refs/heads/main.zip
           #unzip main.zip
           #rm main.zip
-          rm -rf jupytergis-main/docs
-          cd jupytergis-main
+          rm -rf jupytergis-emscripten/docs
+          cd jupytergis-emscripten
           python -m pip install "jupyterlab==4.3" "datamodel-code-generator>=0.23.0"
           jlpm install
           jlpm build
