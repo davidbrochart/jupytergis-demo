@@ -33,17 +33,15 @@ jobs:
           which python
           wget https://github.com/geojupyter/jupytergis/archive/refs/heads/main.zip
           unzip main.zip
+          rm main.zip
+          wget https://github.com/davidbrochart/my-jupyter-shared-drive/archive/refs/heads/main.zip
+          unzip main.zip
+          rm main.zip
           rm -rf jupytergis-main/docs
           cd jupytergis-main
           python -m pip install "jupyterlab==4.3" "datamodel-code-generator>=0.23.0"
           jlpm install
           jlpm build
-          #cd packages/schema
-          #jlpm build
-          #cd ../..
-          #cd packages/base
-          #jlpm build
-          #cd ../..
           mv node_modules ..
           cd ..
           jupyter lite build --contents content --output-dir dist
