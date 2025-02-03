@@ -14,7 +14,7 @@ dependencies:
   - comm>=0.1.2,<0.2.0
   - pydantic>=2,<3
   - pip:
-    - my-jupyter-shared-drive ==0.1.11
+    - my-jupyter-shared-drive ==0.1.12
     - jupyterlab ==4.3
     - jupytergis-lite-demo/python/jupytergis_lab
     - jupytergis-lite-demo/python/jupytergis_core
